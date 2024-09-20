@@ -13,6 +13,5 @@ func CreateMux() *http.ServeMux {
 		fmt.Print("Hello world!! Server is up\n")
 	})
 
-	mux.HandleFunc("/simple", getSimpleData)
 	return mux
 }
