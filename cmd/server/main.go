@@ -1,6 +1,7 @@
 package main
 
 import (
+	"api/cmd/internals/db"
 	"api/cmd/internals/routes"
 	"log"
 	"net/http"
@@ -13,4 +14,5 @@ func main() {
 		log.Fatal(err.Error())
 	}
 
+	_ := db.GetDB()
 }

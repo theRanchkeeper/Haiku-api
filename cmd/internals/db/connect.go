@@ -30,8 +30,18 @@ func (d *Database) setupDB() {
 
 }
 
-func GetDBClient() mongo.Client {
-	return dataBase.client
+func GetDB() Database {
+	return dataBase
+}
+
+// database related getters
+
+func (d *Database) GetDBName() string {
+	return d.dbName
+}
+
+func (d *Database) GetClient() mongo.Client {
+	return d.client
 }
 
 var dataBase Database
